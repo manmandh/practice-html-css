@@ -1,0 +1,22 @@
+.button {
+  float: left;
+  padding: 5px 10px;
+  margin: 5px;
+  color: #fff;
+}
+.btn-error {
+  @extend .button;
+  background: red;
+}
+
+.btn-success{
+  @extend .button;
+  background: green;
+}
+
+.btn-warning{
+  @extend .button;
+  background: orange;
+}
+
+
