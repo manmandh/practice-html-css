@@ -1,5 +1,5 @@
 header{
-  padding: 40px;
+  padding: 40px 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -7,7 +7,6 @@ header{
   @include font($primary-font, 18px, bold);
   
   nav{
-
     display: flex;
     align-items: center;
 
@@ -23,11 +22,11 @@ header{
         } 
            
         a {
-          padding: 10px 15px;
+          padding: 15px 25px;
           text-decoration: none;  
           &:hover {
             @include color($color3, $color1);
-            border-radius: 10px;
+            border-radius: 20px;
           }
         }
       }
