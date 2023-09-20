@@ -1,0 +1,35 @@
+header{
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  nav{
+
+    display: flex;
+    align-items: center;
+
+      ul {
+
+        display: flex;
+        flex-direction: row;
+        
+        
+        li {
+          list-style-type: none;
+          margin: 0 20px;
+          text-transform: capitalize;
+        } 
+           
+        a {
+          padding: 10px 15px;
+          text-decoration: none;  
+          &:hover{
+            background-color: rgba(9, 9, 9, 0.969);
+            color: rgba(249, 244, 244, 0.958);
+            border-radius: 10px;
+          }
+           
+        }
+      }
+  }
+}
