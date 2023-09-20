@@ -3,13 +3,15 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+ 
+  @include font($primary-font, 18px, bold);
+  
   nav{
 
     display: flex;
     align-items: center;
 
       ul {
-
         display: flex;
         flex-direction: row;
         
@@ -23,12 +25,10 @@ header{
         a {
           padding: 10px 15px;
           text-decoration: none;  
-          &:hover{
-            background-color: rgba(9, 9, 9, 0.969);
-            color: rgba(249, 244, 244, 0.958);
+          &:hover {
+            @include color($color3, $color1);
             border-radius: 10px;
           }
-           
         }
       }
   }
