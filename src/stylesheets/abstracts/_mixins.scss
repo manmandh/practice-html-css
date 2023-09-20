@@ -1,0 +1,10 @@
+@mixin size($x : null ,$y : null){
+  width :$x;
+  height :$y;
+}
+
+//Color
+@mixin color($a, $y){
+  background: $a;
+  color: $y;
+}

@@ -1,0 +1,50 @@
+{
+  "name": "testscss",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manmandh/testScss.git"
+  },
+  "author": "manmandh <mantm.22ite@vku.udn.vn>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "eslint": ">=5.16.0",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "parcel": "^2.9.3",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "@parcel/transformer-posthtml": "^2.9.3",
+    "eslint-plugin-html": "^7.1.0",
+    "posthtml": "^0.16.6"
+  },
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/manmandh/testScss/issues"
+  },
+  "homepage": "https://github.com/manmandh/testScss#readme",
+  "scripts": {
+    "build": "babel src -d lib",
+    "test": "jest",
+    "format": "prettier --write ."
+  
+  },
+  "keywords": [],
+  "lint-staged": {
+    "src/**/*.{html,scss}": [
+      "prettier --write --ignore-unknown",
+      "eslint --fix --max-warnings=0"
+    ]
+  },
+  "eslintIgnore": [
+    "src/**/*.scss"
+  ]
+}
