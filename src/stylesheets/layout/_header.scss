@@ -1,4 +1,4 @@
-header{
+.header{
   padding: 40px 120px;
   display: flex;
   flex-direction: row;
@@ -6,29 +6,31 @@ header{
  
   @include font($primary-font, 18px, bold);
   
-  nav{
+  .nav{
     display: flex;
     align-items: center;
 
-      ul {
-        display: flex;
-        flex-direction: row;
-        
-        
-        li {
-          list-style-type: none;
-          margin: 0 20px;
-          text-transform: capitalize;
-        } 
-           
-        a {
-          padding: 15px 25px;
-          text-decoration: none;  
-          &:hover {
-            @include color($color3, $color1);
-            border-radius: 20px;
-          }
+    ul {
+      display: flex;
+      flex-direction: row;
+      
+      
+      li {
+        list-style-type: none;
+        margin: 0 20px;
+        text-transform: capitalize;
+      } 
+         
+      a {
+        padding: 15px 25px;
+        text-decoration: none; 
+        color: $color3; 
+        &:hover {
+          @include color($color3, $color1);
+          border-radius: 20px;
         }
       }
+
+    }   
   }
 }
