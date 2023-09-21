@@ -8,3 +8,9 @@
   background: $a;
   color: $y;
 }
+
+@mixin font($font-family, $font-size, $font-weight: normal) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
