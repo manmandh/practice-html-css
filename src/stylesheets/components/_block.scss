@@ -1,1 +1,42 @@
-
+.block{
+  padding: 40px 120px;
+  &--allbutton{
+    @include flex-element;
+  }
+  &__content{
+    p{
+      @include font($primary-font, 20px, 450);
+      width: 700px;
+      color: #171E27;
+    }
+    margin-bottom: 40px;
+  }
+  &__button{
+    padding: 15px 25px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    margin-right: 20px;
+    &:hover{
+    padding: 15px 25px;
+    border-radius: 20px;
+    background-color: $color3;
+      & a{
+        color: $color1; 
+      }
+    }
+    a{
+      color: $color3; 
+      list-style-type: none;
+      text-decoration: none;
+    } 
+  }
+  &--flex{
+    display: flex;
+    figure img{
+      padding: 2px;
+      background-color: $color2;
+      border-radius:4px;       
+    }
+  }
+}
