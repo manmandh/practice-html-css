@@ -1,24 +1,16 @@
-<header>
+<header class="header">
   <div class="img">
     <img src="./assets/icons/Odyssey.svg" alt="">
   </div>
-  <nav>
+  <nav class="nav">
     <ul>
-      <li>
-        <a href="#">stay connected</a>
-      </li>
-      <li>
-        <a href="#">education</a>
-      </li>
-      <li>
-        <a href="#">community</a>
-      </li>
-      <li>
-        <a href="#">about us</a>
-      </li>
-      <li>
-        <a href="#">sign in</a>
-      </li>
-    </ul>
+      <include
+      src="./components/header-link.html"
+      locals='{
+        "list": "[`stay connected`, `education`, `community`, `about us`,`sign in`]"
+      }'
+      >
+      </include>
+    </ul>  
   </nav>
 </header>
