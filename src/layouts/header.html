@@ -4,12 +4,13 @@
   </div>
   <nav class="nav">
     <ul>
-      <li>
-        <each loop="item in {{ nav-links }}">
-          <a href="javascript:void(0)">{{ item }}</a>
-        </each>
-      </li>
-    </ul>
-    
+      <include
+      src="./components/header-link.html"
+      locals='{
+        "list": "[`stay connected`, `education`, `community`, `about us`,`sign in`]"
+      }'
+      >
+      </include>
+    </ul>  
   </nav>
 </header>
