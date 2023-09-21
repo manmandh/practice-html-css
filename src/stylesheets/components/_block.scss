@@ -1,6 +1,6 @@
-.block{
-  padding: 40px 120px;
-  &--allbutton{
+.block {
+  padding: pxToRem(40) pxToRem(120);
+  &--allbutton {
     position: relative;
     @include flex-element;
     .top {
@@ -19,8 +19,8 @@
         font-family: $primary-font;
       }
     }
-    .bottom{
-      p{
+    .bottom {
+      p {
         color: white;
         @include font($primary-font, 24, 900);
         text-align: right;
@@ -30,53 +30,53 @@
       }
     }
   }
-  
-  &__content{
-    p{
+
+  &__content {
+    p {
       @include font($primary-font, 20px, 450);
-      width: 700px;
-      color: #171E27;
+      width: pxToRem(700);
+      color: #171e27;
     }
     margin-bottom: 40px;
   }
-  &__button{
+  &__button {
     padding: 26px 56px;
     border-radius: 20px;
     outline: none;
     border: none;
     margin-right: 20px;
-    transition: .25s;
+    transition: 0.25s;
     cursor: pointer;
-    &:hover{
-    border-radius: 20px;
-    background-color: $color3;
-      & a{
-        color: $color1; 
+    &:hover {
+      border-radius: 20px;
+      background-color: $color3;
+      & a {
+        color: $color1;
       }
     }
-    a{
-      color: $color3; 
+    a {
+      color: $color3;
       list-style-type: none;
       text-decoration: none;
       @include font($primary-font, 24, 500);
-    } 
-  }
-  &--flex{
-    display: flex;
-    align-items: center;
-    figure img{
-      padding: 2px;
-      background-color: $color2;
-      border-radius:4px;       
     }
   }
-  &--block{
+  &--flex {
+    display: flex;
+    align-items: center;
+    figure img {
+      padding: 2px;
+      background-color: $color2;
+      border-radius: 4px;
+    }
+  }
+  &--block {
     display: block;
     position: absolute;
     background-color: $color3;
     padding: 10px 30px;
-    border-radius: 15px; 
-    right: 192px;
+    border-radius: 15px;
+    right: pxToRem(192);
     top: 50%;
     transform: translate(0, -50%);
     z-index: 2;

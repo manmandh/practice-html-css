@@ -1,33 +1,25 @@
-.header{
-  padding: 40px 120px;
+.header {
+  padding: pxToRem(40) pxToRem(120);
   @include flex-element;
   justify-content: space-between;
- 
   @include font($primary-font, 18px, bold);
-  
-  .nav{
+  .nav {
     @include center-element;
-
     ul {
       @include flex-element;
-      
-      
       li {
         list-style-type: none;
-        margin: 0 20px;
         text-transform: capitalize;
-      } 
-         
+      }
       a {
-        padding: 15px 25px;
-        text-decoration: none; 
-        color: $color3; 
+        padding: 22px 52px;
+        text-decoration: none;
+        color: $color3;
         &:hover {
           @include color($color3, $color1);
           border-radius: 20px;
         }
       }
-
-    }   
+    }
   }
 }
