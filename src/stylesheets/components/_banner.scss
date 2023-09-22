@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-
+  padding: pxToRem(40) pxToRem(120);
   img {
     display: block;
     max-width: 100%;

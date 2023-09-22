@@ -1,2 +1,41 @@
 .activity {
+  padding: pxToRem(40) pxToRem(120);
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  &__paragraph {
+    @include font($primary-font, 64px, 700);
+    color: #020305;
+  }
+  &--all {
+    @include flex-element;
+    column-gap: pxToRem(100);
+  }
+  &__detail {
+    &--case {
+      padding: pxToRem(50);
+    }
+    &--icon {
+      margin-bottom: 20px;
+      img {
+        padding: 10px;
+        background-color: $color2;
+        border-radius: 10px;
+      }
+    }
+    &--text {
+      &_bold {
+        margin-bottom: 20px;
+        @include font($primary-font, 24px, 600);
+      }
+      &_normal {
+        @include font($primary-font, 18px, 400);
+      }
+    }
+  }
 }
