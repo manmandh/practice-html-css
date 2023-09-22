@@ -1,9 +1,7 @@
-// revenue
-@function revenue($px){
-    @return $px / 16 + rem;
+@use "sass:math";
+
+//Revenue
+@function pxToRem($px, $rem: 16) {
+  @return math.div($px, $rem) * 1rem;
 }
 
-@font-face {
-    font-family: 'PlusJakartaSans';
-    src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf') format('truetype');
-}
