@@ -8,6 +8,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+package-lock.json
 
 # dependencies
 /node_modules
@@ -19,4 +20,3 @@ lerna-debug.log*
 
 # misc
 yarn.lock
-
