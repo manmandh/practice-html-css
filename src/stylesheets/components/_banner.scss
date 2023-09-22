@@ -8,12 +8,12 @@
   &__text {
     position: absolute;
     bottom: 50%;
-    left: 188px;
+    left: pxToRem(188);
     z-index: 1;
     transform: translateY(50%);
     color: $color1;
     @include font($primary-font, 64px, 900);
-    width: 411px;
+    width: pxToRem(411);
   }
   .background {
     margin: 0 auto;
@@ -22,12 +22,12 @@
   .astronaut {
     position: absolute;
     top: 0;
-    right: 167px;
+    right: pxToRem(167);
     z-index: 2;
   }
   &__spacewalk {
     position: absolute;
-    top: 409px;
+    top: pxToRem(409);
     left: 50%;
     background-color: $color1;
     padding: 25px 20px;
@@ -61,7 +61,6 @@
     align-items: center;
     gap: 20px;
     .icon {
-      // padding: 10px;
       img {
         padding: 10px;
         background-color: $color2;
