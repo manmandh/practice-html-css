@@ -29,7 +29,7 @@
       position: absolute;
       bottom: 20%;
       transform: translateY(80%);
-      left: 230px;
+      left: pxToRem(230);
       background: $color1;
       box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
       border-radius: 24px;
@@ -41,7 +41,7 @@
       position: absolute;
       bottom: 20%;
       transform: translateY(80%);
-      left: 730px;
+      left: pxToRem(730);
       background: $color1;
       box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
       border-radius: 24px;
@@ -53,7 +53,7 @@
       position: absolute;
       bottom: 20%;
       transform: translateY(80%);
-      left: 1230px;
+      left: pxToRem(1230);
       background: $color1;
       box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
       border-radius: 24px;
