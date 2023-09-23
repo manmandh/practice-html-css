@@ -21,7 +21,16 @@
   align-items: center;
 }
 
-@mixin flex-element {
-  display: flex;
-  flex-direction: row;
+// Flex
+@mixin flex($display: flex, $direction: false, $align: false, $justify: false) {
+  display: $display;
+  @if $direction {
+    flex-direction: $direction;
+  }
+  @if $justify {
+    justify-content: $justify;
+  }
+  @if $align {
+    align-items: $align;
+  }
 }

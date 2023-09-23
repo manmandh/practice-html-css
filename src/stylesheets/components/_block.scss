@@ -2,9 +2,9 @@
   padding: pxToRem(40) pxToRem(120);
   &--allbutton {
     position: relative;
-    @include flex-element;
+    @include flex($display: flex, $direction: row);
     .top {
-      @include flex-element;
+      @include flex($display: flex, $direction: row);
       align-items: center;
       gap: 20px;
       .icon {
