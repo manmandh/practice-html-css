@@ -5,6 +5,62 @@
     display: block;
     max-width: 100%;
   }
+  &__card {
+    &--color {
+      @include font($primary-font, 64, 700);
+      padding: pxToRem(50) pxToRem(50);
+      text-align: left;
+      color: $color2;
+    }
+    &--bold {
+      @include font($primary-font, 24, 500);
+      padding-left: pxToRem(50);
+      text-align: left;
+      color: #020305;
+    }
+    &--normal {
+      padding: pxToRem(50) pxToRem(50);
+      @include font($primary-font, 18, 300);
+      text-align: left;
+      color: #171e27;
+    }
+    &--case1 {
+      position: absolute;
+      bottom: 20%;
+      transform: translateY(80%);
+      left: 230px;
+      background: $color1;
+      box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
+      border-radius: 24px;
+      z-index: 2;
+      width: pxToRem(450);
+      height: pxToRem(430);
+    }
+    &--case2 {
+      position: absolute;
+      bottom: 20%;
+      transform: translateY(80%);
+      left: 730px;
+      background: $color1;
+      box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
+      border-radius: 24px;
+      z-index: 2;
+      width: pxToRem(450);
+      height: pxToRem(430);
+    }
+    &--case3 {
+      position: absolute;
+      bottom: 20%;
+      transform: translateY(80%);
+      left: 1230px;
+      background: $color1;
+      box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
+      border-radius: 24px;
+      z-index: 2;
+      width: pxToRem(450);
+      height: pxToRem(430);
+    }
+  }
   &__text {
     position: absolute;
     bottom: 60%;
