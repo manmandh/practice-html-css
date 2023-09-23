@@ -1,12 +1,12 @@
 .header {
   padding: pxToRem(40) pxToRem(120);
-  @include flex-element;
+  @include flex($display: flex, $direction: row);
   justify-content: space-between;
   @include font($primary-font, 18px, bold);
   .nav {
     @include center-element;
     ul {
-      @include flex-element;
+      @include flex($display: flex, $direction: row);
       li {
         list-style-type: none;
         text-transform: capitalize;
