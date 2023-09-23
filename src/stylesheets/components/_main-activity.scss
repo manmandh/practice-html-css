@@ -13,7 +13,7 @@
     color: #020305;
   }
   &--all {
-    @include flex-element;
+    @include flex($display: flex, $direction: row);
     column-gap: pxToRem(100);
   }
   &__detail {
