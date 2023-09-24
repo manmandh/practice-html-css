@@ -1,7 +1,6 @@
 {
   "name": "testscss",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manmandh/testScss.git"
