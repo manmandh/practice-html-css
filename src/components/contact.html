@@ -19,16 +19,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  function validateEmail() {
-    var emailInput = document.getElementById("email").value;
-    var emailRegex = /^[\w\-]+(\.[\w\-]+)*@([\w\-]+\.)+[a-zA-Z]{2,}$/;
-
-    if (emailRegex.test(emailInput)) {
-      alert("Email valid!!!");
-    } else {
-      alert("Email invalid!!!");
-    }
-  }
-</script>
