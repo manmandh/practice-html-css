@@ -39,7 +39,8 @@
       }
       button {
         padding: 20px 30px;
-        @include font($primary-font, 24, 500);
+        color: $color1;
+        @include font($primary-font, 24, 700);
         background: $color2;
         border-radius: 20px;
         border: none;
