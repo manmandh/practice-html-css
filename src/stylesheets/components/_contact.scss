@@ -22,20 +22,21 @@
       @include font($primary-font, 18, 400);
       color: $color1;
       margin-bottom: 30px;
-      width: pxToRem(750);
+      width: pxToRem(550);
     }
     &--email {
       @include flex($display: flex, $direction: row);
       column-gap: 35px;
+
       input {
         @include font($primary-font, 24, 500);
         background: $color1;
         border-radius: 24px;
         border: none;
         outline: none;
-        padding: 20px 30px;
-        width: pxToRem(600);
-        height: pxToRem(80);
+        padding: 22px 24px;
+        flex-basis: pxToRem(280);
+        flex: 1;
       }
       button {
         padding: 20px 30px;
