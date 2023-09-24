@@ -1,0 +1,32 @@
+.footer {
+  padding: pxToRem(40) pxToRem(120);
+  &__top {
+    @include flex($display: flex, $direction: row);
+    justify-content: space-between;
+    &--link1 {
+      @include flex($display: flex, $direction: row);
+    }
+    &--link2 {
+      @include flex($display: flex, $direction: row);
+    }
+    nav {
+      column-gap: pxToRem(90);
+      @include flex($display: flex, $direction: row);
+    }
+    li {
+      padding: 0 30px;
+      list-style-type: none;
+      text-transform: capitalize;
+    }
+    a {
+      @include font($primary-font, 18, 700);
+      text-decoration: none;
+      color: #020305;
+    }
+  }
+  &__bottom {
+    margin-top: pxToRem(50);
+    text-align: center;
+    @include font($primary-font, 18, 300);
+  }
+}
