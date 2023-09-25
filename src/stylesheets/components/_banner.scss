@@ -1,47 +1,109 @@
 .banner {
   position: relative;
-  padding: pxToRem(40) pxToRem(120);
+  padding: 0 pxToRem(120);
+  @include responsive("xl") {
+    padding: pxToRem(40);
+  }
+  @include responsive("sm") {
+    padding: 0;
+  }
   img {
     display: block;
     max-width: 100%;
   }
   &__text {
     position: absolute;
-    bottom: 50%;
+    top: 60px;
     left: pxToRem(188);
     z-index: 1;
-    transform: translateY(50%);
     color: $color1;
     @include font($primary-font, 64px, 900);
     width: pxToRem(411);
+    @include responsive("xl") {
+      font-size: pxToRem(40);
+      top: 70px;
+      left: pxToRem(70);
+      z-index: 1;
+    }
+    @include responsive("sm") {
+      top: 32px;
+      left: 24px;
+      font-size: 32px;
+      width: pxToRem(300);
+    }
   }
   .background {
     margin: 0 auto;
-    width: auto;
+    @include responsive("xl") {
+      width: 947px;
+      height: 381px;
+    }
   }
   .astronaut {
     position: absolute;
     top: 0;
     right: pxToRem(167);
     z-index: 2;
+    @include responsive("xl") {
+      top: pxToRem(34);
+      width: pxToRem(530);
+      position: absolute;
+      right: pxToRem(37);
+    }
+    @include responsive("sm") {
+      top: pxToRem(176);
+      right: pxToRem(41);
+    }
   }
   &__spacewalk {
     position: absolute;
-    top: pxToRem(409);
     left: 50%;
+    transform: translate(-30px, -50%);
     background-color: $color1;
     padding: 25px 20px;
     border-radius: 15px;
     z-index: 3;
-
     &--body {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 16px;
       margin-top: 15px;
+      figure {
+        width: pxToRem(178);
+        @include responsive("xl") {
+          width: pxToRem(95);
+        }
+      }
+      & > img {
+        width: 70px;
+        @include responsive("xl") {
+          width: pxToRem(47);
+        }
+      }
+      @include responsive("xl") {
+        gap: 8px;
+      }
+    }
+    @include responsive("sm") {
+      left: 24px;
+      top: calc(100% + 4px);
+      transform: none;
+      padding: 12px;
+      left: 24px;
     }
   }
+
   &__exercising {
+    @include responsive("xl") {
+      position: absolute;
+      top: pxToRem(222);
+      right: pxToRem(46);
+    }
+    @include responsive("sm") {
+      top: 307px;
+      padding: 12px;
+      right: 24px;
+    }
     position: absolute;
     top: pxToRem(328);
     right: 11.5%;
@@ -54,6 +116,18 @@
       align-items: center;
       gap: 20px;
       margin-top: 15px;
+      figure {
+        @include responsive("xl") {
+          width: pxToRem(151);
+        }
+        @include responsive("sm") {
+          width: pxToRem(125);
+        }
+      }
+      & > img {
+        @include responsive("sm") {
+        }
+      }
     }
   }
   .top {
@@ -65,10 +139,16 @@
         padding: 10px;
         background-color: $color2;
         border-radius: 10px;
+        @include responsive("xl") {
+          width: pxToRem(32);
+        }
       }
     }
     .title {
       @include font($primary-font, 18px, 500);
+      @include responsive("xl") {
+        font-size: 14px;
+      }
     }
   }
 }
