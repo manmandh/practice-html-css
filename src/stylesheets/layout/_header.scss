@@ -1,27 +1,61 @@
 .header {
-  padding: pxToRem(40) pxToRem(120);
-  @include flex($display: flex, $direction: row);
+  padding: pxToRem(60) pxToRem(120);
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  @include responsive("xl") {
+    padding: pxToRem(30) pxToRem(35);
+    column-gap: pxToRem(160);
+  }
+  @include responsive("sm") {
+    padding: pxToRem(24) pxToRem(24);
+  }
+  img {
+    @include responsive("xl") {
+      width: pxToRem(150);
+    }
+  }
   @include font($primary-font, 18px, bold);
   .nav {
-    @include center-element;
     ul {
-      @include flex($display: flex, $direction: row);
+      @include center-element;
+      column-gap: pxToRem(48);
       li {
         list-style-type: none;
         text-transform: capitalize;
       }
       a {
-        padding: 22px 52px;
         text-decoration: none;
         color: $color3;
-        &:hover {
-          @include color($color3, $color1);
-          border-radius: 20px;
-          box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-            rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-            rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        @include responsive("xl") {
+          font-size: 16px;
         }
+      }
+      @include responsive("xl") {
+        column-gap: pxToRem(32);
+      }
+      @include responsive("sm") {
+        display: none;
+      }
+    }
+    #radius {
+      display: inline-flex;
+      padding: 22px 52px;
+      @include color($color3, $color1);
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      @include responsive("xl") {
+        padding: 16px 38px;
+      }
+    }
+    &__mobile {
+      display: none;
+      @include responsive("sm") {
+        display: block;
+        width: 24px;
+        height: 24px;
       }
     }
   }

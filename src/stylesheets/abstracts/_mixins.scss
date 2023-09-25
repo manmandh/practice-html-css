@@ -14,7 +14,7 @@
   font-size: $font-size;
   font-weight: $font-weight;
 }
-
+//full center
 @mixin center-element {
   display: flex;
   justify-content: center;
@@ -32,5 +32,40 @@
   }
   @if $align {
     align-items: $align;
+  }
+}
+
+//Resp
+@mixin sm {
+  @media screen and (max-width: map-get($break_point, "sm")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: map-get($break_point, "xl")) {
+    @content;
+  }
+}
+
+@mixin resp($break_point) {
+  @media screen and (max-width: $break_point) {
+    @content;
+  }
+}
+
+@mixin responsive($break_point) {
+  @if $break_point == sm {
+    @include sm {
+      @content;
+    }
+  } @else if $break_point == xl {
+    @include xl {
+      @content;
+    }
+  } @else {
+    @include resp {
+      @content;
+    }
   }
 }
