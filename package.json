@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@parcel/transformer-posthtml": "^2.9.3",
+    "html-inspector": "^0.8.2",
     "posthtml": "^0.16.6"
   },
   "description": "",
