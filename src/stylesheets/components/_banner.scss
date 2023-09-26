@@ -2,7 +2,7 @@
   position: relative;
   padding: 0 pxToRem(120);
   @include responsive("xl") {
-    padding: pxToRem(40);
+    padding: 0 pxToRem(40);
   }
   @include responsive("sm") {
     padding: 0;
