@@ -73,6 +73,7 @@
       }
       @include responsive("sm") {
         margin-top: pxToRem(332);
+        width: 100%;
       }
     }
     margin-bottom: 40px;
