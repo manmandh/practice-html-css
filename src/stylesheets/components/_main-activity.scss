@@ -28,7 +28,7 @@
     grid-template-columns: auto auto;
     gap: pxToRem(74);
     @include responsive("xl") {
-      grid-template-columns: auto;
+      grid-template-columns: auto auto;
     }
     @include responsive("sm") {
       gap: 32px;
