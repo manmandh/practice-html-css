@@ -1,16 +1,20 @@
 <header class="header">
   <div class="img">
-    <img src="./assets/icons/Odyssey.svg" alt="">
+    <img src="./assets/icons/Odyssey.svg" alt="" />
   </div>
   <nav class="nav">
     <ul>
       <include
-      src="./components/header-link.html"
-      locals='{
-        "list": "[`stay connected`, `education`, `community`, `about us`,`sign in`]"
+        src="./components/header-link.html"
+        locals='{
+        "list": "[`stay connected`, `education`, `community`, `about us`]"
       }'
       >
       </include>
-    </ul>  
+      <li>
+        <a id="radius" href="#">sign in</a>
+      </li>
+    </ul>
+    <img class="nav__mobile" src="./assets/icons/widgets.svg" alt="" />
   </nav>
 </header>

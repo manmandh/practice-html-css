@@ -5,3 +5,9 @@ $color3: #0d0f12;
 
 //Font family
 $primary-font: "PlusJakartaSans", sans-serif;
+
+//Breakpoint
+$break_point: (
+  "sm": 375px,
+  "xl": 1024px,
+);
