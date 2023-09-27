@@ -1,24 +1,68 @@
 .activity {
-  padding: pxToRem(40) pxToRem(120);
-  img {
-    display: block;
-    max-width: 100%;
+  padding: 0 pxToRem(120);
+  @include responsive("xl") {
+    padding: 0 pxToRem(40);
+  }
+  @include responsive("sm") {
+    margin-top: 30px;
+    padding: 0 pxToRem(24);
+  }
+  figure {
+    img {
+      display: block;
+      max-width: 100%;
+      @include responsive("sm") {
+        display: none;
+      }
+    }
+    @include responsive("sm") {
+      width: 100%;
+      height: pxToRem(80);
+      background-image: url(./../assets/images/brandrespmb.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
   &__grid {
     display: grid;
     grid-template-columns: auto auto;
+    gap: pxToRem(74);
+    @include responsive("xl") {
+      grid-template-columns: auto auto;
+    }
+    @include responsive("sm") {
+      gap: 32px;
+    }
   }
   &__paragraph {
-    @include font($primary-font, 64px, 700);
+    @include font($primary-font, 64px, 800);
     color: #020305;
+    @include responsive("xl") {
+      font-size: pxToRem(40);
+      width: pxToRem(375);
+    }
+    @include responsive("sm") {
+      font-size: 32px;
+      width: 100%;
+    }
   }
   &--all {
     @include flex($display: flex, $direction: row);
     column-gap: pxToRem(100);
+    @include responsive("xl") {
+      gap: pxToRem(33);
+    }
+    @include responsive("sm") {
+      flex-direction: column;
+      row-gap: 12px;
+    }
   }
   &__detail {
     &--case {
-      padding: pxToRem(50);
+      padding: 0 pxToRem(50);
+      @include responsive("xl") {
+        padding: 0;
+      }
     }
     &--icon {
       margin-bottom: 20px;
@@ -27,14 +71,23 @@
         background-color: $color2;
         border-radius: 10px;
       }
+      @include responsive("xl") {
+        width: pxToRem(52);
+      }
     }
     &--text {
       &_bold {
         margin-bottom: 20px;
-        @include font($primary-font, 24px, 600);
+        @include font($primary-font, 24px, 800);
+        @include responsive("xl") {
+          font-size: 18px;
+        }
       }
       &_normal {
         @include font($primary-font, 18px, 400);
+        @include responsive("xl") {
+          font-size: 14px;
+        }
       }
     }
   }
