@@ -1,6 +1,7 @@
 .exploration {
   position: relative;
   padding: 0 pxToRem(120);
+  margin-top: pxToRem(60);
   @include responsive("xl") {
     padding: 0 pxToRem(40);
     margin-top: pxToRem(80);
@@ -25,6 +26,7 @@
     padding-inline: 1pxToRem (160);
     transform: translateY(-12rem);
     position: absolute;
+    padding: 0 pxToRem(160);
     @include responsive("xl") {
       gap: pxToRem(32);
       transform: translateY(-30%);

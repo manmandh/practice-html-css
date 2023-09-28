@@ -1,51 +1,94 @@
 .contact {
   position: relative;
-  padding: pxToRem(40) pxToRem(120);
+  padding: 0 pxToRem(120);
+  @include responsive("xl") {
+    padding: 0 pxToRem(40);
+  }
+  @include responsive("sm") {
+    padding: 0;
+  }
   img {
-    margin-top: pxToRem(250);
+    margin-top: pxToRem(270);
     display: block;
     max-width: 100%;
+    @include responsive("sm") {
+      margin-top: pxToRem(800);
+      height: pxToRem(433);
+      object-fit: cover;
+      object-position: 10%;
+    }
   }
   &__form {
-    padding-left: pxToRem(100);
+    margin-left: pxToRem(100);
     position: absolute;
-    bottom: 45%;
+    bottom: 55%;
     z-index: 1;
-    transform: translateY(75%);
+    transform: translateY(50%);
+    @include responsive("xl") {
+      margin-left: pxToRem(40);
+    }
+    @include responsive("sm") {
+      width: 100%;
+      bottom: 50%;
+      margin-left: 20px;
+    }
     &--bold {
       @include font($primary-font, 64, 800);
       color: $color1;
       margin-bottom: 15px;
-      width: pxToRem(700);
+      @include responsive("xl") {
+        font-size: pxToRem(40);
+      }
     }
     &--normal {
       @include font($primary-font, 18, 400);
       color: $color1;
       margin-bottom: 30px;
-      width: pxToRem(550);
+      @include responsive("xl") {
+        font-size: pxToRem(18);
+        width: 80%;
+      }
     }
     &--email {
       @include flex($display: flex, $direction: row);
-      column-gap: 35px;
-
+      column-gap: 24px;
+      @include responsive("xl") {
+        width: 80%;
+      }
+      @include responsive("sm") {
+        display: block;
+      }
       input {
         @include font($primary-font, 24, 500);
         background: $color1;
         border-radius: 24px;
         border: none;
         outline: none;
-        padding: 22px 24px;
+        padding: pxToRem(26) pxToRem(32);
         flex-basis: pxToRem(280);
         flex: 1;
+        @include responsive("xl") {
+          padding: pxToRem(22) pxToRem(24);
+        }
+        @include responsive("sm") {
+          width: 100%;
+        }
       }
       button {
-        padding: 20px 30px;
+        padding: pxToRem(26) pxToRem(54);
         color: $color1;
         @include font($primary-font, 24, 700);
         background: $color2;
         border-radius: 20px;
         border: none;
         outline: none;
+        @include responsive("xl") {
+          padding: pxToRem(20) pxToRem(40);
+        }
+        @include responsive("sm") {
+          margin-top: 12px;
+          width: 100%;
+        }
       }
     }
   }
