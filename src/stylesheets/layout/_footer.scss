@@ -1,32 +1,61 @@
 .footer {
-  padding: pxToRem(40) pxToRem(120);
+  padding: 0 pxToRem(120);
+  margin-top: 120px;
   &__top {
     @include flex($display: flex, $direction: row);
+    flex-wrap: wrap;
     justify-content: space-between;
     &--link1 {
-      @include flex($display: flex, $direction: row);
+      display: flex;
+      gap: pxToRem(48);
+      @include responsive("sm") {
+        flex-direction: column;
+        gap: 24px;
+        font-size: 16px;
+        width: 100%;
+      }
     }
     &--link2 {
-      @include flex($display: flex, $direction: row);
-    }
-    nav {
-      column-gap: pxToRem(90);
-      @include flex($display: flex, $direction: row);
+      display: flex;
+      gap: pxToRem(48);
+      @include responsive("sm") {
+        gap: 24px;
+        font-size: 16px;
+        width: 100%;
+        flex-wrap: wrap;
+      }
     }
     li {
-      padding: 0 30px;
       list-style-type: none;
       text-transform: capitalize;
     }
     a {
-      @include font($primary-font, 18, 700);
+      @include font($primary-font, 18, 600);
       text-decoration: none;
       color: #020305;
     }
+    @include responsive("xl") {
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+  }
+  @include responsive("xl") {
+    padding: 0 40px;
+    margin-top: 84px;
+  }
+  @include responsive("sm") {
+    padding-inline: 24px;
   }
   &__bottom {
-    margin-top: pxToRem(50);
     text-align: center;
-    @include font($primary-font, 18, 300);
+    @include font($primary-font, 18, 600);
+    color: #5c5050;
+    margin-block: 80px;
+    @include responsive("xl") {
+      margin-bottom: 48px;
+      margin-top: 24px;
+      text-align: left;
+    }
   }
 }
