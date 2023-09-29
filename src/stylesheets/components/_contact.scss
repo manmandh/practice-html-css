@@ -1,8 +1,14 @@
 .contact {
   position: relative;
   padding: 0 pxToRem(120);
+  @include responsive("nm") {
+    padding: 0 pxToRem(40);
+  }
   @include responsive("xl") {
     padding: 0 pxToRem(40);
+  }
+  @include responsive("l") {
+    padding: 0;
   }
   @include responsive("sm") {
     padding: 0;
@@ -11,6 +17,15 @@
     margin-top: pxToRem(270);
     display: block;
     max-width: 100%;
+    @include responsive("md") {
+      margin-top: pxToRem(350);
+    }
+    @include responsive("l") {
+      margin-top: pxToRem(800);
+      height: pxToRem(433);
+      object-fit: cover;
+      object-position: 10%;
+    }
     @include responsive("sm") {
       margin-top: pxToRem(800);
       height: pxToRem(433);
@@ -24,8 +39,19 @@
     bottom: 55%;
     z-index: 1;
     transform: translateY(50%);
+    @include responsive("md") {
+      margin-left: pxToRem(50);
+    }
+    @include responsive("nm") {
+      margin-left: pxToRem(30);
+    }
     @include responsive("xl") {
       margin-left: pxToRem(40);
+    }
+    @include responsive("l") {
+      width: 100%;
+      bottom: 50%;
+      margin-left: 20px;
     }
     @include responsive("sm") {
       width: 100%;
@@ -36,6 +62,12 @@
       @include font($primary-font, 64, 800);
       color: $color1;
       margin-bottom: 15px;
+      @include responsive("md") {
+        font-size: pxToRem(45);
+      }
+      @include responsive("nm") {
+        font-size: pxToRem(42);
+      }
       @include responsive("xl") {
         font-size: pxToRem(40);
       }
@@ -44,6 +76,12 @@
       @include font($primary-font, 18, 400);
       color: $color1;
       margin-bottom: 30px;
+      @include responsive("md") {
+        width: 60%;
+      }
+      @include responsive("nm") {
+        width: 70%;
+      }
       @include responsive("xl") {
         font-size: pxToRem(18);
         width: 80%;
@@ -52,8 +90,17 @@
     &--email {
       @include flex($display: flex, $direction: row);
       column-gap: 24px;
+      @include responsive("md") {
+        width: 80%;
+      }
+      @include responsive("nm") {
+        width: 80%;
+      }
       @include responsive("xl") {
         width: 80%;
+      }
+      @include responsive("l") {
+        display: block;
       }
       @include responsive("sm") {
         display: block;
@@ -84,6 +131,9 @@
         outline: none;
         @include responsive("xl") {
           padding: pxToRem(20) pxToRem(40);
+        }
+        @include responsive("l") {
+          margin-top: 12px;
         }
         @include responsive("sm") {
           margin-top: 12px;

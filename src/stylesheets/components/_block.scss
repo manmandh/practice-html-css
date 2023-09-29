@@ -1,13 +1,22 @@
 .block {
   padding: pxToRem(40) pxToRem(120);
+  @include responsive("nm") {
+    padding: 10px pxToRem(40);
+  }
   @include responsive("xl") {
     padding: 0 pxToRem(40);
+  }
+  @include responsive("l") {
+    position: relative;
   }
   @include responsive("sm") {
     position: relative;
   }
   &--allbutton {
     position: relative;
+    @include responsive("l") {
+      position: static;
+    }
     @include responsive("sm") {
       position: static;
     }
@@ -16,6 +25,9 @@
       @include flex($display: flex, $direction: row);
       align-items: center;
       gap: 20px;
+      @include responsive("l") {
+        font-size: 14px;
+      }
       @include responsive("sm") {
         font-size: 14px;
       }
@@ -24,6 +36,9 @@
           padding: 10px;
           background-color: $color2;
           border-radius: 10px;
+        }
+        @include responsive("l") {
+          width: 32px;
         }
         @include responsive("sm") {
           width: 32px;
@@ -42,15 +57,29 @@
         letter-spacing: 10px;
         margin-top: 10px;
         margin-left: 50px;
+        @include responsive("md") {
+          font-size: 20px;
+        }
+        @include responsive("nm") {
+          font-size: 16px;
+        }
         @include responsive("xl") {
           font-size: 20px;
           letter-spacing: 8px;
           margin-left: 20px;
         }
+        @include responsive("l") {
+          font-size: 16px;
+        }
         @include responsive("sm") {
           font-size: 16px;
         }
       }
+    }
+    @include responsive("l") {
+      @include flex($direction: column);
+      align-items: start;
+      gap: 32px;
     }
     @include responsive("sm") {
       @include flex($direction: column);
@@ -67,9 +96,24 @@
       @include font($primary-font, 20px, 450);
       width: pxToRem(700);
       color: #171e27;
+      @include responsive("lg") {
+        width: 45%;
+      }
+      @include responsive("md") {
+        font-size: 18px;
+        width: 50%;
+      }
+      @include responsive("nm") {
+        font-size: 16px;
+        width: 35%;
+      }
       @include responsive("xl") {
         width: pxToRem(395);
         font-size: 16px;
+      }
+      @include responsive("l") {
+        margin-top: pxToRem(420);
+        width: 100%;
       }
       @include responsive("sm") {
         margin-top: pxToRem(332);
@@ -85,9 +129,18 @@
     border: none;
     margin-right: 20px;
     transition: 0.25s;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow:
+      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px,
+      rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    @include responsive("md") {
+      padding: 20px 30px;
+    }
+    @include responsive("nm") {
+      padding: 20px 35px;
+    }
     @include responsive("xl") {
       padding: 20px 40px;
     }
@@ -130,15 +183,25 @@
     top: 30%;
     transform: translate(-10px, -50%);
     z-index: 2;
+    @include responsive("lg") {
+      right: 50px;
+    }
+    @include responsive("md") {
+      padding: 10px 15px;
+    }
+    @include responsive("nm") {
+      transform: translateY(-10%);
+      right: 20px;
+    }
     @include responsive("xl") {
       right: pxToRem(98);
       top: -100%;
     }
+    @include responsive("l") {
+      transform: translate(-10px, 120%);
+    }
     @include responsive("sm") {
-      padding: 12px;
-      top: pxToRem(-190);
-      transform: translate(0, 0);
-      right: pxToRem(28);
+      transform: translate(-10px, 200%);
     }
   }
 }

@@ -36,14 +36,37 @@
 }
 
 //Resp
-@mixin sm {
-  @media screen and (max-width: map-get($break_point, "sm")) {
+@mixin large {
+  @media screen and (max-width: 1659px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin normal {
+  @media screen and (max-width: 1239px) {
     @content;
   }
 }
 
 @mixin xl {
   @media screen and (max-width: map-get($break_point, "xl")) {
+    @content;
+  }
+}
+
+@mixin l {
+  @media screen and (max-width: 957px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (max-width: map-get($break_point, "sm")) {
     @content;
   }
 }
@@ -55,7 +78,19 @@
 }
 
 @mixin responsive($break_point) {
-  @if $break_point == sm {
+  @if $break_point == lg {
+    @include large {
+      @content;
+    }
+  } @else if $break_point == md {
+    @include medium {
+      @content;
+    }
+  } @else if $break_point == nm {
+    @include normal {
+      @content;
+    }
+  } @else if $break_point == sm {
     @include sm {
       @content;
     }
@@ -63,8 +98,12 @@
     @include xl {
       @content;
     }
+  } @else if $break_point == l {
+    @include l {
+      @content;
+    }
   } @else {
-    @include resp {
+    @include resp() {
       @content;
     }
   }

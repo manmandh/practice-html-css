@@ -1,8 +1,14 @@
 .banner {
   position: relative;
   padding: 0 pxToRem(120);
+  @include responsive("nm") {
+    padding: 0 pxToRem(40);
+  }
   @include responsive("xl") {
     padding: 0 pxToRem(40);
+  }
+  @include responsive("l") {
+    padding: 0;
   }
   @include responsive("sm") {
     padding: 0;
@@ -13,17 +19,30 @@
   }
   &__text {
     position: absolute;
-    top: 60px;
+    top: pxToRem(60);
     left: pxToRem(188);
     z-index: 1;
     color: $color1;
     @include font($primary-font, 64px, 900);
     width: pxToRem(411);
+    @include responsive("md") {
+      font-size: 40px;
+    }
+    @include responsive("nm") {
+      font-size: 40px;
+      left: pxToRem(70);
+    }
     @include responsive("xl") {
       font-size: pxToRem(40);
       top: 70px;
       left: pxToRem(70);
       z-index: 1;
+    }
+    @include responsive("l") {
+      top: 32px;
+      left: 24px;
+      font-size: 32px;
+      width: pxToRem(300);
     }
     @include responsive("sm") {
       top: 32px;
@@ -44,11 +63,26 @@
     top: 0;
     right: pxToRem(167);
     z-index: 2;
+    @include responsive("lg") {
+      right: 20px;
+    }
+    @include responsive("nm") {
+      right: 0;
+      width: 60%;
+    }
+    @include responsive("md") {
+      right: pxToRem(50);
+      width: 50%;
+    }
     @include responsive("xl") {
       top: pxToRem(34);
       width: pxToRem(530);
       position: absolute;
       right: pxToRem(37);
+    }
+    @include responsive("l") {
+      top: pxToRem(176);
+      right: pxToRem(41);
     }
     @include responsive("sm") {
       top: pxToRem(176);
@@ -63,6 +97,23 @@
     padding: 25px 20px;
     border-radius: 15px;
     z-index: 3;
+    @include responsive("lg") {
+      transform: none;
+    }
+    @include responsive("md") {
+      transform: translate(-55px, -10%);
+      left: 55%;
+      padding: 20px 15px;
+    }
+    @include responsive("nm") {
+      transform: translate(-100px, 20%);
+    }
+    @include responsive("xl") {
+      transform: translate(-30px, -20%);
+    }
+    @include responsive("l") {
+      transform: translate(-40px, 20%);
+    }
     &--body {
       display: flex;
       align-items: center;
@@ -74,8 +125,11 @@
           width: pxToRem(95);
         }
       }
+      @include responsive("nm") {
+        width: 60%;
+      }
       & > img {
-        width: 70px;
+        width: pxToRem(70);
         @include responsive("xl") {
           width: pxToRem(47);
         }
@@ -85,7 +139,6 @@
       }
     }
     @include responsive("sm") {
-      left: 24px;
       top: calc(100% + 4px);
       transform: none;
       padding: 12px;
@@ -94,15 +147,21 @@
   }
 
   &__exercising {
+    @include responsive("md") {
+      transform: translate(10px, -70%);
+      padding: 20px 15px;
+    }
     @include responsive("xl") {
-      position: absolute;
-      top: pxToRem(222);
-      right: pxToRem(46);
+      transform: translate(-30px, -20%);
+    }
+    @include responsive("nm") {
+      transform: translate(40px, -50%);
+    }
+    @include responsive("l") {
+      transform: translate(20px, -20%);
     }
     @include responsive("sm") {
-      top: 307px;
-      padding: 12px;
-      right: 24px;
+      transform: translate(20px, -20%);
     }
     position: absolute;
     top: pxToRem(328);
@@ -120,12 +179,11 @@
         @include responsive("xl") {
           width: pxToRem(151);
         }
-        @include responsive("sm") {
+        @include responsive("l") {
           width: pxToRem(125);
         }
-      }
-      & > img {
         @include responsive("sm") {
+          width: pxToRem(125);
         }
       }
     }
