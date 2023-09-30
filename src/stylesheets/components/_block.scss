@@ -74,6 +74,10 @@
         @include responsive("sm") {
           font-size: 16px;
         }
+        @include responsive("sm") {
+          font-size: 14px;
+          letter-spacing: 4px;
+        }
       }
     }
     @include responsive("l") {
@@ -185,23 +189,26 @@
     z-index: 2;
     @include responsive("lg") {
       right: 50px;
+      transform: translateY(20%);
     }
     @include responsive("md") {
       padding: 10px 15px;
     }
     @include responsive("nm") {
-      transform: translateY(-10%);
+      transform: translate(-50px, -10%);
       right: 20px;
     }
     @include responsive("xl") {
-      right: pxToRem(98);
-      top: -100%;
+      transform: translate(-30px, -60%);
     }
     @include responsive("l") {
-      transform: translate(-10px, 120%);
+      transform: translate(-100px, -220%);
     }
     @include responsive("sm") {
-      transform: translate(-10px, 200%);
+      transform: translate(-100px, -200%);
+    }
+    @include responsive("m") {
+      transform: translate(-70px, -350%);
     }
   }
 }

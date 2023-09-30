@@ -37,7 +37,7 @@
 
 //Resp
 @mixin large {
-  @media screen and (max-width: 1659px) {
+  @media screen and (max-width: 1670px) {
     @content;
   }
 }
@@ -65,8 +65,19 @@
     @content;
   }
 }
+@mixin sl {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
 @mixin sm {
   @media screen and (max-width: map-get($break_point, "sm")) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media screen and (max-width: 475px) {
     @content;
   }
 }
@@ -100,6 +111,14 @@
     }
   } @else if $break_point == l {
     @include l {
+      @content;
+    }
+  } @else if $break_point == sl {
+    @include sl {
+      @content;
+    }
+  } @else if $break_point == m {
+    @include m {
       @content;
     }
   } @else {

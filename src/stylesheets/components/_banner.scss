@@ -106,13 +106,22 @@
       padding: 20px 15px;
     }
     @include responsive("nm") {
-      transform: translate(-100px, 20%);
+      transform: translate(-100px, -10%);
     }
     @include responsive("xl") {
       transform: translate(-30px, -20%);
     }
     @include responsive("l") {
-      transform: translate(-40px, 20%);
+      transform: translate(-90px, 20%);
+    }
+    @include responsive("sl") {
+      transform: translate(-190px, 20%);
+    }
+    @include responsive("sm") {
+      transform: translate(-270px, 30%);
+    }
+    @include responsive("m") {
+      display: none;
     }
     &--body {
       display: flex;
@@ -123,6 +132,15 @@
         width: pxToRem(178);
         @include responsive("xl") {
           width: pxToRem(95);
+        }
+        & > img {
+          @include responsive("nm") {
+            max-width: none;
+            width: pxToRem(150);
+          }
+          @include responsive("xl") {
+            width: pxToRem(100);
+          }
         }
       }
       @include responsive("nm") {
@@ -135,14 +153,9 @@
         }
       }
       @include responsive("xl") {
+        max-width: 100%;
         gap: 8px;
       }
-    }
-    @include responsive("sm") {
-      top: calc(100% + 4px);
-      transform: none;
-      padding: 12px;
-      left: 24px;
     }
   }
 
@@ -161,7 +174,10 @@
       transform: translate(20px, -20%);
     }
     @include responsive("sm") {
-      transform: translate(20px, -20%);
+      transform: translate(10px, -20%);
+    }
+    @include responsive("m") {
+      transform: translate(-10px, 10%);
     }
     position: absolute;
     top: pxToRem(328);
@@ -206,6 +222,9 @@
       @include font($primary-font, 18px, 500);
       @include responsive("xl") {
         font-size: 14px;
+      }
+      @include responsive("m") {
+        font-size: 12px;
       }
     }
   }

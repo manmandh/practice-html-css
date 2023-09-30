@@ -18,19 +18,9 @@
     img {
       display: block;
       max-width: 100%;
-      @include responsive("l") {
-        display: none;
-      }
       @include responsive("sm") {
         display: none;
       }
-    }
-    @include responsive("l") {
-      width: 100%;
-      height: pxToRem(80);
-      background-image: url(./../assets/images/brandresponmb.png);
-      background-size: contain;
-      background-repeat: no-repeat;
     }
     @include responsive("sm") {
       width: 100%;
