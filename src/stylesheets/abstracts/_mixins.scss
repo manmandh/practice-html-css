@@ -82,6 +82,13 @@
   }
 }
 
+@mixin mm {
+  @media screen and (max-width: 412px) {
+    @content;
+  }
+}
+//to 338PX min-width responsive
+
 @mixin resp($break_point) {
   @media screen and (max-width: $break_point) {
     @content;
@@ -119,6 +126,10 @@
     }
   } @else if $break_point == m {
     @include m {
+      @content;
+    }
+  } @else if $break_point == mm {
+    @include mm {
       @content;
     }
   } @else {

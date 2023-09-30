@@ -32,6 +32,9 @@
       object-fit: cover;
       object-position: 10%;
     }
+    @include responsive("mm") {
+      margin-top: pxToRem(1000);
+    }
   }
   &__form {
     margin-left: pxToRem(100);
@@ -70,6 +73,9 @@
       }
       @include responsive("xl") {
         font-size: pxToRem(40);
+      }
+      @include responsive("mm") {
+        font-size: pxToRem(32);
       }
     }
     &--normal {
