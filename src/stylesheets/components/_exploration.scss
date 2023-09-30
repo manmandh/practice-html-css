@@ -2,15 +2,26 @@
   position: relative;
   padding: 0 pxToRem(120);
   margin-top: pxToRem(60);
+  @include responsive("nm") {
+    padding: 0 pxToRem(40);
+  }
   @include responsive("xl") {
     padding: 0 pxToRem(40);
     margin-top: pxToRem(80);
+  }
+  @include responsive("l") {
+    padding: 0;
   }
   @include responsive("sm") {
     padding: 0;
   }
   img {
     max-width: 100%;
+    @include responsive("l") {
+      height: pxToRem(393);
+      object-fit: cover;
+      object-position: 20%;
+    }
     @include responsive("sm") {
       height: pxToRem(393);
       object-fit: cover;
@@ -23,14 +34,29 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: pxToRem(52);
-    padding-inline: 1pxToRem (160);
+    padding-inline: pxToRem(160);
     transform: translateY(-12rem);
     position: absolute;
     padding: 0 pxToRem(160);
+    @include responsive("lg") {
+      transform: translateY(-40%);
+    }
+    @include responsive("md") {
+      transform: translateY(-15%);
+    }
+    @include responsive("nm") {
+      padding-inline: pxToRem(70);
+      transform: translateY(-25%);
+    }
     @include responsive("xl") {
       gap: pxToRem(32);
       transform: translateY(-30%);
       padding: 0 80px;
+    }
+    @include responsive("l") {
+      grid-template-columns: auto;
+      transform: translateY(-80px);
+      padding: 0 24px;
     }
     @include responsive("sm") {
       grid-template-columns: auto;
@@ -41,12 +67,28 @@
       background: $color1;
       box-shadow: 0px 20px 40px -10px rgba(100, 118, 125, 0.5);
       border-radius: 24px;
+      @include responsive("lg") {
+        padding: 0;
+      }
+      @include responsive("nm") {
+        border-radius: 12px;
+      }
     }
     &--color {
       @include font($primary-font, 64, 800);
       padding: pxToRem(50) pxToRem(50);
       text-align: left;
       color: $color2;
+      @include responsive("lg") {
+        padding: 15px;
+      }
+      @include responsive("md") {
+        padding: 12px;
+      }
+      @include responsive("nm") {
+        font-size: 40px;
+        padding: 15px;
+      }
       @include responsive("xl") {
         font-size: pxToRem(32);
         padding: 24px;
@@ -57,6 +99,16 @@
       padding: 0 pxToRem(50);
       text-align: left;
       color: #020305;
+      @include responsive("lg") {
+        padding-left: 15px;
+      }
+      @include responsive("md") {
+        padding-left: 12px;
+      }
+      @include responsive("nm") {
+        font-size: 20px;
+        padding: 15px;
+      }
       @include responsive("xl") {
         font-size: pxToRem(18);
         padding-left: 24;
@@ -67,6 +119,16 @@
       @include font($primary-font, 18, 500);
       text-align: left;
       color: #171e27;
+      @include responsive("lg") {
+        padding: 15px;
+      }
+      @include responsive("md") {
+        padding: 12px;
+      }
+      @include responsive("nm") {
+        font-size: 14px;
+        padding: 15px;
+      }
       @include responsive("xl") {
         font-size: pxToRem(14);
         padding: 24px;
@@ -75,7 +137,7 @@
   }
   &__text {
     position: absolute;
-    top: 80px;
+    top: 40px;
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
@@ -83,10 +145,26 @@
     @include font($primary-font, 60px, 800);
     width: pxToRem(1220);
     text-align: center;
+    @include responsive("lg") {
+      font-size: 50px;
+    }
+    @include responsive("md") {
+      font-size: 45px;
+      width: 67%;
+    }
+    @include responsive("nm") {
+      font-size: 40px;
+      width: 80%;
+    }
     @include responsive("xl") {
       font-size: pxToRem(40);
       width: pxToRem(764);
-      top: pxToRem(40);
+    }
+    @include responsive("l") {
+      font-size: 32px;
+      width: 80%;
+      text-align: left;
+      top: 24px;
     }
     @include responsive("sm") {
       font-size: 32px;

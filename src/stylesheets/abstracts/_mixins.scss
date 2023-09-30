@@ -36,8 +36,20 @@
 }
 
 //Resp
-@mixin sm {
-  @media screen and (max-width: map-get($break_point, "sm")) {
+@mixin large {
+  @media screen and (max-width: 1670px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: 1480px) {
+    @content;
+  }
+}
+
+@mixin normal {
+  @media screen and (max-width: 1239px) {
     @content;
   }
 }
@@ -48,6 +60,35 @@
   }
 }
 
+@mixin l {
+  @media screen and (max-width: 957px) {
+    @content;
+  }
+}
+@mixin sl {
+  @media screen and (max-width: 700px) {
+    @content;
+  }
+}
+@mixin sm {
+  @media screen and (max-width: map-get($break_point, "sm")) {
+    @content;
+  }
+}
+
+@mixin m {
+  @media screen and (max-width: 475px) {
+    @content;
+  }
+}
+
+@mixin mm {
+  @media screen and (max-width: 412px) {
+    @content;
+  }
+}
+//to 338PX min-width responsive
+
 @mixin resp($break_point) {
   @media screen and (max-width: $break_point) {
     @content;
@@ -55,7 +96,19 @@
 }
 
 @mixin responsive($break_point) {
-  @if $break_point == sm {
+  @if $break_point == lg {
+    @include large {
+      @content;
+    }
+  } @else if $break_point == md {
+    @include medium {
+      @content;
+    }
+  } @else if $break_point == nm {
+    @include normal {
+      @content;
+    }
+  } @else if $break_point == sm {
     @include sm {
       @content;
     }
@@ -63,8 +116,24 @@
     @include xl {
       @content;
     }
+  } @else if $break_point == l {
+    @include l {
+      @content;
+    }
+  } @else if $break_point == sl {
+    @include sl {
+      @content;
+    }
+  } @else if $break_point == m {
+    @include m {
+      @content;
+    }
+  } @else if $break_point == mm {
+    @include mm {
+      @content;
+    }
   } @else {
-    @include resp {
+    @include resp() {
       @content;
     }
   }

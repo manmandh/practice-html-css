@@ -3,14 +3,24 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @include responsive("nm") {
+    padding: pxToRem(30) pxToRem(40);
+    column-gap: 15px;
+  }
   @include responsive("xl") {
     padding: pxToRem(30) pxToRem(35);
-    column-gap: pxToRem(160);
+    column-gap: pxToRem(70);
+  }
+  @include responsive("l") {
+    padding: pxToRem(24) pxToRem(24);
   }
   @include responsive("sm") {
     padding: pxToRem(24) pxToRem(24);
   }
   img {
+    @include responsive("nm") {
+      width: 70%;
+    }
     @include responsive("xl") {
       width: pxToRem(150);
     }
@@ -27,6 +37,9 @@
       a {
         text-decoration: none;
         color: $color3;
+        @include responsive("nm") {
+          font-size: 17px;
+        }
         @include responsive("xl") {
           font-size: 16px;
         }
@@ -34,24 +47,39 @@
       @include responsive("xl") {
         column-gap: pxToRem(32);
       }
+      @include responsive("l") {
+        display: none;
+      }
       @include responsive("sm") {
         display: none;
       }
     }
     #radius {
+      @include responsive("nm") {
+        padding: 20px 30px;
+        border-radius: 10px;
+      }
       display: inline-flex;
       padding: 22px 52px;
       @include color($color3, $color1);
       border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      box-shadow:
+        rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
       @include responsive("xl") {
         padding: 16px 38px;
       }
     }
     &__mobile {
       display: none;
+      @include responsive("l") {
+        display: block;
+        width: 24px;
+        height: 24px;
+      }
       @include responsive("sm") {
         display: block;
         width: 24px;

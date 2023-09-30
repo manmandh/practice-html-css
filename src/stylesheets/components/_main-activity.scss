@@ -1,7 +1,14 @@
 .activity {
   padding: 0 pxToRem(120);
+  @include responsive("nm") {
+    padding: 0 pxToRem(40);
+  }
   @include responsive("xl") {
     padding: 0 pxToRem(40);
+  }
+  @include responsive("l") {
+    margin-top: 30px;
+    padding: 0 pxToRem(24);
   }
   @include responsive("sm") {
     margin-top: 30px;
@@ -30,6 +37,10 @@
     @include responsive("xl") {
       grid-template-columns: auto auto;
     }
+    @include responsive("l") {
+      grid-template-columns: auto;
+      gap: 32px;
+    }
     @include responsive("sm") {
       grid-template-columns: auto;
       gap: 32px;
@@ -38,9 +49,22 @@
   &__paragraph {
     @include font($primary-font, 64px, 800);
     color: #020305;
+    @include responsive("lg") {
+      font-size: 50px;
+    }
+    @include responsive("md") {
+      font-size: 42px;
+    }
+    @include responsive("nm") {
+      font-size: 40px;
+    }
     @include responsive("xl") {
       font-size: pxToRem(40);
       width: pxToRem(375);
+    }
+    @include responsive("l") {
+      font-size: 32px;
+      width: 100%;
     }
     @include responsive("sm") {
       font-size: 32px;
@@ -50,8 +74,15 @@
   &--all {
     @include flex($display: flex, $direction: row);
     column-gap: pxToRem(100);
+    @include responsive("nm") {
+      column-gap: pxToRem(40);
+    }
     @include responsive("xl") {
       gap: pxToRem(33);
+    }
+    @include responsive("l") {
+      flex-direction: column;
+      row-gap: 12px;
     }
     @include responsive("sm") {
       flex-direction: column;
@@ -61,6 +92,15 @@
   &__detail {
     &--case {
       padding: 0 pxToRem(50);
+      @include responsive("lg") {
+        padding: 0;
+      }
+      @include responsive("md") {
+        padding: 0;
+      }
+      @include responsive("nm") {
+        padding: 0;
+      }
       @include responsive("xl") {
         padding: 0;
       }
