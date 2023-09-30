@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 .banner {
   position: relative;
   padding: 0 pxToRem(120);
@@ -26,36 +27,36 @@
     @include font($primary-font, 64px, 900);
     width: pxToRem(411);
     @include responsive("md") {
-      font-size: 40px;
+      font-size: pxToRem(40);
     }
     @include responsive("nm") {
-      font-size: 40px;
+      font-size: pxToRem(40);
       left: pxToRem(70);
     }
     @include responsive("xl") {
       font-size: pxToRem(40);
-      top: 70px;
+      top: pxToRem(70);
       left: pxToRem(70);
       z-index: 1;
     }
     @include responsive("l") {
       top: 32px;
       left: 24px;
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: pxToRem(300);
     }
     @include responsive("sm") {
       top: 32px;
       left: 24px;
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: pxToRem(300);
     }
   }
   .background {
     margin: 0 auto;
     @include responsive("xl") {
-      width: 947px;
-      height: 381px;
+      width: pxToRem(947);
+      height: pxToRem(381);
     }
   }
   .astronaut {
@@ -221,10 +222,10 @@
     .title {
       @include font($primary-font, 18px, 500);
       @include responsive("xl") {
-        font-size: 14px;
+        font-size: pxToRem(14);
       }
       @include responsive("m") {
-        font-size: 12px;
+        font-size: pxToRem(12);
       }
     }
   }

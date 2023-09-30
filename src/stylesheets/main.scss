@@ -1,18 +1,3 @@
-@import "abstracts/function";
-@import "abstracts/mixins";
-@import "abstracts/variables";
-
-@import "base/reset";
-@import "base/typography";
-
-@import "components/block";
-@import "components/exploration";
-@import "components/contact";
-@import "components/banner";
-@import "components/main-activity";
-
-@import "layout/footer";
-@import "layout/header";
-@import "layout/main";
-
-@import "pages/home";
+@use "base";
+@use "components/" as *;
+@use "layout/" as *;

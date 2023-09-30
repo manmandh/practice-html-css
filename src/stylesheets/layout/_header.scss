@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 .header {
   padding: pxToRem(60) pxToRem(120);
   display: flex;
@@ -38,10 +39,10 @@
         text-decoration: none;
         color: $color3;
         @include responsive("nm") {
-          font-size: 17px;
+          font-size: pxToRem(17);
         }
         @include responsive("xl") {
-          font-size: 16px;
+          font-size: pxToRem(16);
         }
       }
       @include responsive("xl") {
@@ -76,11 +77,6 @@
     &__mobile {
       display: none;
       @include responsive("l") {
-        display: block;
-        width: 24px;
-        height: 24px;
-      }
-      @include responsive("sm") {
         display: block;
         width: 24px;
         height: 24px;

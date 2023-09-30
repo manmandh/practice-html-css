@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 .activity {
   padding: 0 pxToRem(120);
   @include responsive("nm") {
@@ -7,11 +8,11 @@
     padding: 0 pxToRem(40);
   }
   @include responsive("l") {
-    margin-top: 30px;
+    margin-top: pxToRem(30);
     padding: 0 pxToRem(24);
   }
   @include responsive("sm") {
-    margin-top: 30px;
+    margin-top: pxToRem(30);
     padding: 0 pxToRem(24);
   }
   figure {
@@ -39,35 +40,35 @@
     }
     @include responsive("l") {
       grid-template-columns: auto;
-      gap: 32px;
+      gap: pxToRem(32);
     }
     @include responsive("sm") {
       grid-template-columns: auto;
-      gap: 32px;
+      gap: pxToRem(32);
     }
   }
   &__paragraph {
     @include font($primary-font, 64px, 800);
     color: #020305;
     @include responsive("lg") {
-      font-size: 50px;
+      font-size: pxToRem(50);
     }
     @include responsive("md") {
-      font-size: 42px;
+      font-size: pxToRem(42);
     }
     @include responsive("nm") {
-      font-size: 40px;
+      font-size: pxToRem(40);
     }
     @include responsive("xl") {
       font-size: pxToRem(40);
       width: pxToRem(375);
     }
     @include responsive("l") {
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: 100%;
     }
     @include responsive("sm") {
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: 100%;
     }
   }
@@ -121,13 +122,13 @@
         margin-bottom: 20px;
         @include font($primary-font, 24px, 800);
         @include responsive("xl") {
-          font-size: 18px;
+          font-size: pxToRem(18);
         }
       }
       &_normal {
         @include font($primary-font, 18px, 400);
         @include responsive("xl") {
-          font-size: 14px;
+          font-size: pxToRem(14);
         }
       }
     }
