@@ -24,7 +24,7 @@
       @include responsive("sm") {
         flex-direction: column;
         gap: 24px;
-        font-size: 16px;
+        font-size: pxToRem(16);
         width: 100%;
       }
     }
@@ -33,7 +33,7 @@
       gap: pxToRem(48);
       @include responsive("sm") {
         gap: 24px;
-        font-size: 16px;
+        font-size: pxToRem(16);
         width: 100%;
         flex-wrap: wrap;
       }
@@ -54,8 +54,8 @@
     }
   }
   @include responsive("xl") {
-    padding: 0 40px;
-    margin-top: 84px;
+    padding: 0 pxToRem(40);
+    margin-top: pxToRem(84);
   }
   @include responsive("sm") {
     padding-inline: 24px;
@@ -64,7 +64,7 @@
     text-align: center;
     @include font($primary-font, 18, 600);
     color: #5c5050;
-    margin-block: 80px;
+    margin-block: pxToRem(80);
     @include responsive("xl") {
       margin-bottom: 48px;
       margin-top: 24px;

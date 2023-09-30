@@ -107,12 +107,12 @@
         padding-left: 12px;
       }
       @include responsive("nm") {
-        font-size: 20px;
+        font-size: pxToRem(18);
         padding: 15px;
       }
       @include responsive("xl") {
         font-size: pxToRem(18);
-        padding-left: 24;
+        padding-left: pxToRem(24);
       }
     }
     &--normal {
@@ -121,13 +121,13 @@
       text-align: left;
       color: #171e27;
       @include responsive("lg") {
-        padding: 15px;
+        padding: pxToRem(15);
       }
       @include responsive("md") {
-        padding: 12px;
+        padding: pxToRem(12);
       }
       @include responsive("nm") {
-        font-size: 14px;
+        font-size: pxToRem(14);
         padding: 15px;
       }
       @include responsive("xl") {
@@ -138,7 +138,7 @@
   }
   &__text {
     position: absolute;
-    top: 40px;
+    top: pxToRem(40);
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
@@ -147,14 +147,14 @@
     width: pxToRem(1220);
     text-align: center;
     @include responsive("lg") {
-      font-size: 50px;
+      font-size: pxToRem(50);
     }
     @include responsive("md") {
-      font-size: 45px;
+      font-size: pxToRem(45);
       width: 67%;
     }
     @include responsive("nm") {
-      font-size: 40px;
+      font-size: pxToRem(40);
       width: 80%;
     }
     @include responsive("xl") {
@@ -162,13 +162,13 @@
       width: pxToRem(764);
     }
     @include responsive("l") {
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: 80%;
       text-align: left;
       top: 24px;
     }
     @include responsive("sm") {
-      font-size: 32px;
+      font-size: pxToRem(32);
       width: pxToRem(327);
       text-align: left;
       top: 24px;
