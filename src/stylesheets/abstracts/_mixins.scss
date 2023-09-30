@@ -1,7 +1,5 @@
-@mixin size($x: null, $y: null) {
-  width: $x;
-  height: $y;
-}
+@use "variables" as *;
+@use "function" as *;
 
 //Color
 @mixin color($a, $y) {

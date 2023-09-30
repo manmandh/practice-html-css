@@ -1,3 +1,4 @@
+@use "../abstracts/" as *;
 .banner {
   position: relative;
   padding: 0 pxToRem(120);
