@@ -10,7 +10,10 @@
   }
   @include responsive("xl") {
     padding: pxToRem(30) pxToRem(35);
-    column-gap: pxToRem(70);
+    column-gap: pxToRem(20);
+  }
+  @include responsive("ll") {
+    padding: pxToRem(10) pxToRem(10);
   }
   @include responsive("l") {
     padding: pxToRem(24) pxToRem(24);
@@ -23,7 +26,7 @@
       width: 70%;
     }
     @include responsive("xl") {
-      width: pxToRem(150);
+      width: 65%;
     }
   }
   @include font($primary-font, 18px, bold);
@@ -42,11 +45,11 @@
           font-size: pxToRem(17);
         }
         @include responsive("xl") {
-          font-size: pxToRem(16);
+          font-size: pxToRem(14);
         }
       }
       @include responsive("xl") {
-        column-gap: pxToRem(32);
+        column-gap: 15px;
       }
       @include responsive("l") {
         display: none;
@@ -71,7 +74,8 @@
         rgba(0, 0, 0, 0.17) 0px 12px 13px,
         rgba(0, 0, 0, 0.09) 0px -3px 5px;
       @include responsive("xl") {
-        padding: 16px 38px;
+        padding: 10px 15px;
+        border-radius: 10px;
       }
     }
     &__mobile {

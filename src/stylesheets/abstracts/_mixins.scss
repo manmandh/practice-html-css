@@ -47,7 +47,7 @@
 }
 
 @mixin normal {
-  @media screen and (max-width: 1239px) {
+  @media screen and (max-width: 1280px) {
     @content;
   }
 }
@@ -58,13 +58,20 @@
   }
 }
 
-@mixin l {
-  @media screen and (max-width: 957px) {
+@mixin ll {
+  @media screen and (max-width: 954px) {
     @content;
   }
 }
+
+@mixin l {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 @mixin sl {
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
@@ -85,7 +92,7 @@
     @content;
   }
 }
-//to 338PX min-width responsive
+//to 319PX min-width responsive
 
 @mixin resp($break_point) {
   @media screen and (max-width: $break_point) {
@@ -112,6 +119,10 @@
     }
   } @else if $break_point == xl {
     @include xl {
+      @content;
+    }
+  } @else if $break_point == ll {
+    @include ll {
       @content;
     }
   } @else if $break_point == l {
