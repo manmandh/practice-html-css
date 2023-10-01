@@ -10,6 +10,9 @@
     padding: 0 pxToRem(40);
     margin-top: pxToRem(80);
   }
+  @include responsive("ll") {
+    padding: pxToRem(10) pxToRem(10);
+  }
   @include responsive("l") {
     padding: 0;
   }
@@ -27,6 +30,9 @@
       height: pxToRem(393);
       object-fit: cover;
       object-position: 20%;
+    }
+    @include responsive("mm") {
+      height: pxToRem(300);
     }
   }
   &__card {
@@ -51,8 +57,11 @@
     }
     @include responsive("xl") {
       gap: pxToRem(32);
-      transform: translateY(-30%);
-      padding: 0 80px;
+      transform: translateY(-20%);
+      padding: 0 pxToRem(80);
+    }
+    @include responsive("ll") {
+      padding: 0 pxToRem(40);
     }
     @include responsive("l") {
       grid-template-columns: auto;
@@ -158,8 +167,11 @@
       width: 80%;
     }
     @include responsive("xl") {
-      font-size: pxToRem(40);
+      font-size: pxToRem(38);
       width: pxToRem(764);
+    }
+    @include responsive("ll") {
+      font-size: pxToRem(32);
     }
     @include responsive("l") {
       font-size: pxToRem(32);
@@ -172,6 +184,10 @@
       width: pxToRem(327);
       text-align: left;
       top: 24px;
+    }
+    @include responsive("mm") {
+      font-size: pxToRem(24);
+      width: 80%;
     }
   }
 }

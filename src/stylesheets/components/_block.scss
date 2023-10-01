@@ -7,6 +7,9 @@
   @include responsive("xl") {
     padding: 0 pxToRem(40);
   }
+  @include responsive("ll") {
+    padding: pxToRem(10) pxToRem(10);
+  }
   @include responsive("l") {
     position: relative;
   }
@@ -69,6 +72,9 @@
           letter-spacing: 8px;
           margin-left: 20px;
         }
+        @include responsive("ll") {
+          letter-spacing: 3px;
+        }
         @include responsive("l") {
           font-size: pxToRem(16);
         }
@@ -116,9 +122,12 @@
         width: pxToRem(395);
         font-size: pxToRem(16);
       }
+      @include responsive("ll") {
+        width: 45%;
+      }
       @include responsive("l") {
         margin-top: pxToRem(420);
-        width: 100%;
+        width: 90%;
       }
       @include responsive("sm") {
         margin-top: pxToRem(332);
@@ -135,11 +144,17 @@
     margin-right: 20px;
     transition: 0.25s;
     box-shadow:
-      rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.25) 0px 30px 44px,
       rgba(0, 0, 0, 0.12) 0px -12px 30px,
       rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px,
       rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 20px;
+    background-color: $color3;
+    cursor: pointer;
+    &--link {
+      @include font($primary-font, 24, 500);
+    }
     @include responsive("md") {
       padding: 20px 30px;
     }
@@ -149,16 +164,11 @@
     @include responsive("xl") {
       padding: 20px 40px;
     }
-    cursor: pointer;
-    &:hover {
-      border-radius: 20px;
-      background-color: $color3;
-      & a {
-        color: $color1;
-      }
+    @include responsive("ll") {
+      padding: 10px 20px;
     }
     a {
-      color: $color3;
+      color: $color1;
       list-style-type: none;
       text-decoration: none;
       @include font($primary-font, 24, 500);
@@ -172,6 +182,7 @@
   &--flex {
     display: flex;
     align-items: center;
+    gap: 10px;
     figure img {
       padding: 2px;
       background-color: $color2;
@@ -202,14 +213,26 @@
     @include responsive("xl") {
       transform: translate(-30px, -60%);
     }
+    @include responsive("ll") {
+      transform: translate(-30px, -100%);
+    }
     @include responsive("l") {
-      transform: translate(-100px, -220%);
+      transform: translate(-150px, 20%);
+    }
+    @include responsive("sl") {
+      transform: translate(-80px, -30%);
     }
     @include responsive("sm") {
-      transform: translate(-100px, -200%);
+      transform: translate(-80px, -50%);
     }
     @include responsive("m") {
-      transform: translate(-70px, -350%);
+      transform: translate(-30px, -155%);
+    }
+    @media screen and (max-width: 350px) {
+      transform: translate(10px, -190%);
+    }
+    @media screen and (max-width: 326px) {
+      transform: translate(10px, -250%);
     }
   }
 }

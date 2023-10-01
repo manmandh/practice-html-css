@@ -8,6 +8,9 @@
   @include responsive("xl") {
     padding: 0 pxToRem(40);
   }
+  @include responsive("ll") {
+    padding: pxToRem(10) pxToRem(10);
+  }
   @include responsive("l") {
     padding: 0;
   }
@@ -52,10 +55,11 @@
     @include responsive("xl") {
       margin-left: pxToRem(40);
     }
+    @include responsive("ll") {
+      transform: translateY(150%);
+    }
     @include responsive("l") {
-      width: 100%;
-      bottom: 50%;
-      margin-left: 20px;
+      transform: translateY(50%);
     }
     @include responsive("sm") {
       width: 100%;
@@ -73,7 +77,7 @@
         font-size: pxToRem(42);
       }
       @include responsive("xl") {
-        font-size: pxToRem(40);
+        font-size: pxToRem(38);
       }
       @include responsive("mm") {
         font-size: pxToRem(32);
@@ -107,10 +111,10 @@
         width: 80%;
       }
       @include responsive("l") {
-        display: block;
+        flex-direction: column;
       }
       @include responsive("sm") {
-        display: block;
+        flex-direction: column;
       }
       input {
         @include font($primary-font, 24, 500);
@@ -123,6 +127,11 @@
         flex: 1;
         @include responsive("xl") {
           padding: pxToRem(22) pxToRem(24);
+        }
+        @include responsive("ll") {
+          padding: pxToRem(10) pxToRem(15);
+          font-size: pxToRem(18);
+          border-radius: 10px;
         }
         @include responsive("sm") {
           width: 100%;
@@ -138,6 +147,11 @@
         outline: none;
         @include responsive("xl") {
           padding: pxToRem(20) pxToRem(40);
+        }
+        @include responsive("ll") {
+          padding: pxToRem(10) pxToRem(15);
+          font-size: pxToRem(18);
+          border-radius: 10px;
         }
         @include responsive("l") {
           margin-top: 12px;
