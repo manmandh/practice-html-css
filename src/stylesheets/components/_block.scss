@@ -149,23 +149,13 @@
       rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px,
       rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 20px;
     background-color: $color3;
     cursor: pointer;
     &--link {
       @include font($primary-font, 24, 500);
-    }
-    @include responsive("md") {
-      padding: 20px 30px;
-    }
-    @include responsive("nm") {
-      padding: 20px 35px;
-    }
-    @include responsive("xl") {
-      padding: 20px 40px;
-    }
-    @include responsive("ll") {
-      padding: 10px 20px;
+      @include responsive("xl") {
+        font-size: pxToRem(20);
+      }
     }
     a {
       color: $color1;
@@ -174,8 +164,6 @@
       @include font($primary-font, 24, 500);
       @include responsive("xl") {
         font-size: pxToRem(20);
-      }
-      @include responsive("sm") {
       }
     }
   }
