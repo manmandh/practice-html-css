@@ -1,8 +1,7 @@
 @use "../abstracts/" as *;
 .exploration {
   position: relative;
-  padding: 0 pxToRem(120);
-  margin-top: pxToRem(60);
+  padding: pxToRem(60) pxToRem(120);
   @include responsive("nm") {
     padding: 0 pxToRem(40);
   }
