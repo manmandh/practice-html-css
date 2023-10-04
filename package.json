@@ -32,8 +32,8 @@
   },
   "homepage": "https://github.com/manmandh/testScss#readme",
   "scripts": {
-    "build": "babel src -d lib",
-    "test": "jest",
+    "start": "parcel",
+    "build": "parcel build",
     "format": "prettier --write ."
   },
   "keywords": [],

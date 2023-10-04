@@ -1,8 +1,7 @@
 @use "../abstracts/" as *;
 .exploration {
   position: relative;
-  padding: 0 pxToRem(120);
-  margin-top: pxToRem(60);
+  padding: pxToRem(60) pxToRem(120);
   @include responsive("nm") {
     padding: 0 pxToRem(40);
   }
@@ -147,7 +146,7 @@
   }
   &__text {
     position: absolute;
-    top: pxToRem(40);
+    top: pxToRem(80);
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);

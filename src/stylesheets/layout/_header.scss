@@ -21,14 +21,6 @@
   @include responsive("sm") {
     padding: pxToRem(24) pxToRem(24);
   }
-  img {
-    @include responsive("nm") {
-      width: 70%;
-    }
-    @include responsive("xl") {
-      width: 65%;
-    }
-  }
   @include font($primary-font, 18px, bold);
   .nav {
     ul {
